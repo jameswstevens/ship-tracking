@@ -60,7 +60,7 @@ func handleGetVessels(w http.ResponseWriter, r *http.Request) {
 	values := url.Values{}
 	// values.Add("lat", lat)
 	// values.Add("lon", lon)
-	values.Add("radius", "1")
+	values.Add("radius", "5")
 	values.Add("port_unlocode", "USGLS")
 	values.Add("api-key", datalasticAPIKey)
 	resp, err := http.Get(datalasticBaseURL + values.Encode())
